@@ -1,0 +1,33 @@
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+
+{% block content %}
+
+    {# Event selection form #}
+    <form action="#" method="post">
+        <select name="option" class="form-control mb-2">
+            <option selected>Choisir un évènement</option>
+            {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+        <input name="_token" type="hidden" value="{{ token }}">
+        <input name="submit" type="submit" value="Afficher les tickets" class="btn btn-primary">
+    </form>
+
+    {# Tickets table #}
+    {% if true %}
+        <table class="table table-striped my-4">
+            <tr>
+                <th></th>
+                <th>Nom</th>
+            </tr>
+            {% for event in events %}
+                <tr>
+                    <td><input type="checkbox" class="form-control"></td>
+                    <td>{{ event.class_name }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+{% endblock %}

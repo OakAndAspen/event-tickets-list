@@ -1,0 +1,23 @@
+{
+    "name": "oakandaspen/eventticketslist",
+    "description": "This Prestashop module displays a list of valid ticket for a chosen event.",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Irina Despot",
+            "email": "irinadespot@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "PrestaShop\\Module\\EventTicketsList\\Controller\\": "src/Controller"
+        }
+    },
+    "config": {
+        "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+}

@@ -1,0 +1,7 @@
+eventticketslist_index:
+    path: eventticketslist/
+    methods: [GET, POST]
+    defaults:
+        _controller: 'PrestaShop\Module\EventTicketsList\Controller\AdminEventTicketsController::indexAction'
+        _legacy_controller: AdminEventTickets
+        _legacy_link: AdminEventTickets

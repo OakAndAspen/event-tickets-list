@@ -3,11 +3,11 @@
 {% block content %}
 
     {# Event selection form #}
-    <form action="#" method="post">
-        <select name="option" class="form-control mb-2">
+    <form action="{{formAction}}" method="get">
+        <select name="eventId" class="form-control mb-2">
             <option selected>Choisir un évènement</option>
-            {% for option in options %}
-                <option value="{{ option }}">{{ option }}</option>
+            {% for event in events %}
+                <option value="{{ event.id }}">{{ event.date }} - {{ event.name }}</option>
             {% endfor %}
         </select>
         <input name="_token" type="hidden" value="{{ token }}">
@@ -19,12 +19,16 @@
         <table class="table table-striped my-4">
             <tr>
                 <th></th>
+                <th>ID Ticket</th>
+                <th>Prénom</th>
                 <th>Nom</th>
             </tr>
-            {% for event in events %}
+            {% for ticket in tickets %}
                 <tr>
                     <td><input type="checkbox" class="form-control"></td>
-                    <td>{{ event.class_name }}</td>
+                    <td>{{ticket.ticketId}}</td>
+                    <td>{{ticket.firstName}}</td>
+                    <td>{{ticket.lastName}}</td>
                 </tr>
             {% endfor %}
         </table>

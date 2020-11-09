@@ -1,4 +1,4 @@
-#Event tickets list
+# Event tickets list
 
 This Prestashop module supplements the Advanced Event Booking Pro module.
 
